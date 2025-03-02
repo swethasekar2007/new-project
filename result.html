@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .score-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .score-card h2 {
+            font-size: 24px;
+            color: #5c9b9b;
+        }
+        .score-card .score {
+            font-size: 40px;
+            color: #3e7272;
+            margin-top: 10px;
+        }
+        .retry-button {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .retry-button:hover {
+            background-color: #3e7272;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz Result</h1>
+    </header>
+    <div class="content">
+        <div class="score-card">
+            <h2>Your Score</h2>
+            <div class="score" id="score"></div>
+            <button class="retry-button" onclick="retryQuiz()">Retry Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        // Fetch the score from localStorage and display it
+        window.onload = function() {
+            var score = localStorage.getItem('quizScore');
+            if (score !== null) {
+                document.getElementById('score').textContent = score + " / 10";  // Display score out of 10
+            } else {
+                document.getElementById('score').textContent = "No score available!";  // If no score is available
+            }
+        };
+
+        // Function to clear the score and retry the quiz
+        function retryQuiz() {
+            localStorage.removeItem('quizScore');  // Clear previous score
+            window.location.href = 'contracts.html';   // Redirect to the quiz page to retry
+            window.location.href = 'torts.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter1.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter2.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter3.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter4.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter5.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'chapter6.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'Businesscommunication.html';   // Redirect to the quiz page to retry
+	        window.location.href = 'Legallanguage.html';   // Redirect to the quiz page to retry
+        }
+    </script>
+</body>
+</html>

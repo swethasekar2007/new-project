@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Terms Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3e7272;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        button {
+            background-color: #3e7272;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e7272;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Legal Terms</h1>
+    </header>
+    <div class="content">
+        <form id="quizForm">
+            <!-- Questions Here... -->
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var score = 0;
+            var totalQuestions = 10;
+            var form = document.getElementById('quizForm');
+
+            // Check answers
+            if (form.q1.value == "A person who helps another in committing a crime") score++;
+            if (form.q2.value == "The process of making a formal judgment or decision") score++;
+            if (form.q3.value == "Postponing a court proceeding to a later date") score++;
+            if (form.q4.value == "A statement acknowledging something as true") score++;
+            if (form.q5.value == "A written statement sworn under oath") score++;
+            if (form.q6.value == "A change or addition to a law or document") score++;
+            if (form.q7.value == "The unlawful killing of a person") score++;
+            if (form.q8.value == "An accomplice who turns witness for the prosecution") score++;
+            if (form.q9.value == "Failure to fulfill the terms of a contract") score++;
+            if (form.q10.value == "The death penalty for a serious crime") score++;
+
+            // Store score in localStorage and redirect to the result page
+            localStorage.setItem('quizScore', score);
+            window.location.href = 'result.html';  // Redirect to result page
+        }
+    </script>
+</body>
+</html>

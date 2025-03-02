@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVNO Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        button {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e7272;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobile Virtual Network Operator (MVNO) Quiz</h1>
+    </header>
+    <div class="content">
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What is a Mobile Virtual Network Operator (MVNO)?</h3>
+                <label><input type="radio" name="q1" value="A company that owns and operates wireless infrastructure">A company that owns and operates wireless infrastructure</label><br>
+                <label><input type="radio" name="q1" value="A company that buys network access from traditional MNOs to sell mobile services">A company that buys network access from traditional MNOs to sell mobile services</label><br>
+                <label><input type="radio" name="q1" value="A company that only provides internet services">A company that only provides internet services</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. Which of the following is an example of a Mobile Virtual Network Operator (MVNO)?</h3>
+                <label><input type="radio" name="q2" value="Verizon">Verizon</label><br>
+                <label><input type="radio" name="q2" value="Google Fi">Google Fi</label><br>
+                <label><input type="radio" name="q2" value="T-Mobile">T-Mobile</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. What do MVNOs typically rely on to provide mobile services?</h3>
+                <label><input type="radio" name="q3" value="Own infrastructure for coverage">Own infrastructure for coverage</label><br>
+                <label><input type="radio" name="q3" value="Wholesale access to another network's infrastructure">Wholesale access to another network's infrastructure</label><br>
+                <label><input type="radio" name="q3" value="Only Wi-Fi connections">Only Wi-Fi connections</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. How do MVNOs differ from traditional Mobile Network Operators (MNOs)?</h3>
+                <label><input type="radio" name="q4" value="MVNOs own and maintain the entire network infrastructure">MVNOs own and maintain the entire network infrastructure</label><br>
+                <label><input type="radio" name="q4" value="MVNOs do not own the physical wireless network infrastructure">MVNOs do not own the physical wireless network infrastructure</label><br>
+                <label><input type="radio" name="q4" value="MNOs do not offer cellular services">MNOs do not offer cellular services</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. Which of the following is NOT an advantage of MVNOs?</h3>
+                <label><input type="radio" name="q5" value="Offering lower-priced mobile plans">Offering lower-priced mobile plans</label><br>
+                <label><input type="radio" name="q5" value="Providing access to a network without owning infrastructure">Providing access to a network without owning infrastructure</label><br>
+                <label><input type="radio" name="q5" value="Exclusively offering premium-tier services">Exclusively offering premium-tier services</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h3>6. MVNOs generally offer which of the following types of services?</h3>
+                <label><input type="radio" name="q6" value="Only prepaid plans">Only prepaid plans</label><br>
+                <label><input type="radio" name="q6" value="Only business services">Only business services</label><br>
+                <label><input type="radio" name="q6" value="Both prepaid and postpaid mobile plans">Both prepaid and postpaid mobile plans</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h3>7. What role does a Mobile Virtual Network Operator (MVNO) play in the mobile network ecosystem?</h3>
+                <label><input type="radio" name="q7" value="It provides network infrastructure">It provides network infrastructure</label><br>
+                <label><input type="radio" name="q7" value="It resells mobile network services provided by MNOs">It resells mobile network services provided by MNOs</label><br>
+                <label><input type="radio" name="q7" value="It manufactures mobile devices">It manufactures mobile devices</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. Which of the following is a common characteristic of MVNOs?</h3>
+                <label><input type="radio" name="q8" value="They have their own towers and antennas">They have their own towers and antennas</label><br>
+                <label><input type="radio" name="q8" value="They typically have a focus on specific market niches or target groups">They typically have a focus on specific market niches or target groups</label><br>
+                <label><input type="radio" name="q8" value="They offer only basic voice and text services">They offer only basic voice and text services</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. Which of the following is NOT a type of Mobile Virtual Network Operator (MVNO)?</h3>
+                <label><input type="radio" name="q9" value="Full MVNO">Full MVNO</label><br>
+                <label><input type="radio" name="q9" value="Light MVNO">Light MVNO</label><br>
+                <label><input type="radio" name="q9" value="Data-only MVNO">Data-only MVNO</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h3>10. Why would a company choose to become an MVNO rather than an MNO?</h3>
+                <label><input type="radio" name="q10" value="To avoid investing in expensive network infrastructure">To avoid investing in expensive network infrastructure</label><br>
+                <label><input type="radio" name="q10" value="To have more control over network services">To have more control over network services</label><br>
+                <label><input type="radio" name="q10" value="To provide mobile broadband in rural areas">To provide mobile broadband in rural areas</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var score = 0;
+            var form = document.getElementById('quizForm');
+
+            // Check answers
+            if (form.q1.value == "A company that buys network access from traditional MNOs to sell mobile services") score++;
+            if (form.q2.value == "Google Fi") score++;
+            if (form.q3.value == "Wholesale access to another network's infrastructure") score++;
+            if (form.q4.value == "MVNOs do not own the physical wireless network infrastructure") score++;
+            if (form.q5.value == "Exclusively offering premium-tier services") score++;
+            if (form.q6.value == "Both prepaid and postpaid mobile plans") score++;
+            if (form.q7.value == "It resells mobile network services provided by MNOs") score++;
+            if (form.q8.value == "They typically have a focus on specific market niches or target groups") score++;
+            if (form.q9.value == "Data-only MVNO") score++;
+            if (form.q10.value == "To avoid investing in expensive network infrastructure") score++;
+
+            // Store score in localStorage and redirect to result page
+            localStorage.setItem('quizScore', score);
+            window.location.href = 'result.html';  // Redirect to result page
+        }
+    </script>
+</body>
+</html>

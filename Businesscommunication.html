@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Media Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        button {
+            background-color: #5c9b9b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e7272;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Business Communication</h1>
+    </header>
+    <div class="content">
+        <form id="quizForm">
+            <!-- Section 1: Basics of Visual Media -->
+            <div class="question">
+                <h3>1. What is visual media?</h3>
+                <label><input type="radio" name="q1" value="Information presented in written form">a) Information presented in written form</label><br>
+                <label><input type="radio" name="q1" value="Information in the form of visual representations">b) Information in the form of visual representations</label><br>
+                <label><input type="radio" name="q1" value="Only digital photographs">c) Only digital photographs</label>
+            </div>
+
+            <div class="question">
+                <h3>2. Which of the following is NOT a type of visual media?</h3>
+                <label><input type="radio" name="q2" value="Photography">a) Photography</label><br>
+                <label><input type="radio" name="q2" value="Animation">b) Animation</label><br>
+                <label><input type="radio" name="q2" value="Essays">c) Essays</label>
+            </div>
+
+            <!-- Section 2: Visual Aids -->
+            <div class="question">
+                <h3>3. What is the primary purpose of visual aids in a presentation?</h3>
+                <label><input type="radio" name="q3" value="To replace the speaker's speech">a) To replace the speaker's speech</label><br>
+                <label><input type="radio" name="q3" value="To distract the audience">b) To distract the audience</label><br>
+                <label><input type="radio" name="q3" value="To enhance understanding and retention">c) To enhance understanding and retention</label>
+            </div>
+
+            <div class="question">
+                <h3>4. Which of these is NOT a reason to use visual aids?</h3>
+                <label><input type="radio" name="q4" value="Improves audience memory">a) Improves audience memory</label><br>
+                <label><input type="radio" name="q4" value="Provides clearer organization">b) Provides clearer organization</label><br>
+                <label><input type="radio" name="q4" value="Replaces all textual content">c) Replaces all textual content</label>
+            </div>
+
+            <!-- Section 3: Visual Communication -->
+            <div class="question">
+                <h3>5. Which of the following best describes visual communication?</h3>
+                <label><input type="radio" name="q5" value="The use of spoken words to communicate">a) The use of spoken words to communicate</label><br>
+                <label><input type="radio" name="q5" value="The process of conveying information through visual elements">b) The process of conveying information through visual elements</label><br>
+                <label><input type="radio" name="q5" value="Writing long paragraphs to explain concepts">c) Writing long paragraphs to explain concepts</label>
+            </div>
+
+            <div class="question">
+                <h3>6. What element of visual communication helps evoke emotions and create hierarchy?</h3>
+                <label><input type="radio" name="q6" value="Typography">a) Typography</label><br>
+                <label><input type="radio" name="q6" value="Composition">b) Composition</label><br>
+                <label><input type="radio" name="q6" value="Color">c) Color</label>
+            </div>
+
+            <!-- Section 4: Principles of Visual Design -->
+            <div class="question">
+                <h3>7. Which principle of visual design helps create emphasis by making certain elements stand out?</h3>
+                <label><input type="radio" name="q7" value="Balance">a) Balance</label><br>
+                <label><input type="radio" name="q7" value="Contrast">b) Contrast</label><br>
+                <label><input type="radio" name="q7" value="White space">c) White space</label>
+            </div>
+
+            <div class="question">
+                <h3>8. What does the principle of hierarchy in visual design help achieve?</h3>
+                <label><input type="radio" name="q8" value="It makes all elements look the same">a) It makes all elements look the same</label><br>
+                <label><input type="radio" name="q8" value="It guides the audience in reading the information in the right order">b) It guides the audience in reading the information in the right order</label><br>
+                <label><input type="radio" name="q8" value="It removes unnecessary elements from the design">c) It removes unnecessary elements from the design</label>
+            </div>
+
+            <!-- Section 5: Types of Visual Media -->
+            <div class="question">
+                <h3>9. Which of the following is NOT a type of visual aid?</h3>
+                <label><input type="radio" name="q9" value="PowerPoint slides">a) PowerPoint slides</label><br>
+                <label><input type="radio" name="q9" value="Posters">b) Posters</label><br>
+                <label><input type="radio" name="q9" value="Novels">c) Novels</label>
+            </div>
+
+            <div class="question">
+                <h3>10. What is the primary purpose of an infographic?</h3>
+                <label><input type="radio" name="q10" value="To confuse the audience with data">a) To confuse the audience with data</label><br>
+                <label><input type="radio" name="q10" value="To present information in a visually appealing and easy-to-understand format">b) To present information in a visually appealing and easy-to-understand format</label><br>
+                <label><input type="radio" name="q10" value="To remove the need for presentations">c) To remove the need for presentations</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var score = 0;
+            var totalQuestions = 10;
+            var form = document.getElementById('quizForm');
+
+            // Check answers
+            if (form.q1.value == "Information in the form of visual representations") score++;
+            if (form.q2.value == "Essays") score++;
+            if (form.q3.value == "To enhance understanding and retention") score++;
+            if (form.q4.value == "Replaces all textual content") score++;
+            if (form.q5.value == "The process of conveying information through visual elements") score++;
+            if (form.q6.value == "Color") score++;
+            if (form.q7.value == "Contrast") score++;
+            if (form.q8.value == "It guides the audience in reading the information in the right order") score++;
+            if (form.q9.value == "Novels") score++;
+            if (form.q10.value == "To present information in a visually appealing and easy-to-understand format") score++;
+
+            // Store score in localStorage and redirect to the result page
+            localStorage.setItem('quizScore', score);
+            window.location.href = 'result.html';  // Redirect to the result page
+        }
+    </script>
+</body>
+</html>
